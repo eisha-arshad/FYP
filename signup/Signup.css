@@ -1,0 +1,188 @@
+.signup-container {
+  min-height: 100vh;
+  background-size: cover;     
+  background-position: center; 
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+
+.signup-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  border-radius: 18px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+  padding: 40px 30px;
+  width: 100%;
+  max-width: 320px;
+  text-align: center;
+  animation: slideIn 0.8s ease-out;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  max-height: 70vh; 
+  overflow-y: auto;
+  /* scrollbar-width: none; 
+  -ms-overflow-style: none;  */
+}
+
+/* .signup-card::-webkit-scrollbar {
+  display: none; 
+} */
+
+@keyframes slideIn {
+  from {
+    transform: translateY(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
+
+.role-icon {
+  margin-bottom: 14px;
+  color: #04285d; /* UniSnap star yellow pop */
+}
+
+.signup-card h2 {
+  font-size: 26px;
+  font-weight: 600;
+  color: #82e6ff;
+  margin-bottom: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 13px;
+  overflow-y: auto;
+  max-height: 340px; /* adjust based on screen */
+  padding-right: 26px; 
+  scrollbar-width: thin; 
+  scrollbar-color:#04285d transparent;
+   /* scrollbar-width: none;
+  -ms-overflow-style: none; */
+}
+
+form::-webkit-scrollbar {
+  width: 6px;
+}
+
+/* form::-webkit-scrollbar {
+  width: none;
+} */
+
+
+form::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+form input,
+form select {
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: none;
+  font-size: 14px;
+  outline: none;
+  background: #bef2ff;
+  color: #04285d;
+  font-weight: 600;
+}
+
+form input::placeholder {
+  color: #04285d;
+  font-weight: 600;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: #aceefe;
+}
+
+button[type="submit"] {
+  margin-top: 10px;
+  padding: 10px;
+  background: #003d99;
+  color: white;
+  font-weight: bold;
+  border-color: #aceefe;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+button[type="submit"]:hover {
+  background: #04285d;
+  color: #aceefe;
+}
+
+.google-btn {
+  margin-top: 15px;
+  padding: 10px;
+  border-color: #04285d;
+  border-radius: 6px;
+  background-color:  #bef2ff;
+  color:#04285d;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  justify-content: center;
+  font-weight: 750;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.google-btn:hover {
+  transform: scale(1.03);
+}
+
+@media (max-width: 480px) {
+  .signup-card {
+    padding: 30px 20px;
+  }
+
+  .signup-card h2 {
+    font-size: 22px;
+  }
+
+  form input,
+  form select {
+    font-size: 13px;
+  }
+}
+
+.round-back-btn {
+  position: absolute;
+  top: 22px;
+  left: 22px;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.15);
+  border: 2px solid #aceefe;
+  border-radius: 50%;
+  backdrop-filter: blur(8px);
+  color:  #04285d;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 999;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+
+.round-back-btn:hover {
+  background: #04285d;
+  color: #aceefe ;
+  border-color: #aceefe;
+}
