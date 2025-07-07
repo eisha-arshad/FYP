@@ -1,0 +1,45 @@
+.ppContainer {
+  padding: 3rem 2rem;
+  color: #aceefe;
+  text-align: center;
+}
+
+.ppGrid {
+  max-width: 600px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.ppCard {
+  background-color: #04285d;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.25);
+}
+
+.btnRow {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 1rem;
+}
+
+.viewBtn,
+.downloadBtn {
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #003d99;
+  color: white;
+  transition: background 0.3s ease;
+}
+
+.viewBtn:hover,
+.downloadBtn:hover {
+  background-color: #065c97;
+}

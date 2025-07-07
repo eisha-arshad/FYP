@@ -1,0 +1,33 @@
+.pgContainer {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #aceefe;
+}
+
+.pgBar {
+  height: 24px;
+  width: 80%;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+
+.pgFill {
+  height: 100%;
+  background: linear-gradient(to right, #82e6ff, #003d99);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  border-radius: 12px 0 0 12px;
+  transition: width 0.5s ease;
+  color: #04285d;
+}
+
+.pgStatus {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+}

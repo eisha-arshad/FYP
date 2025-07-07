@@ -1,0 +1,169 @@
+/* .dashboardContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(160deg, #04285d, #0b5b9c);
+  color: #aceefe;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dashboardHeader {
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #021f44;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.navLinks a {
+  color: #aceefe;
+  margin-left: 1.5rem;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.navLinks a:hover {
+  color: #82e6ff;
+}
+
+.dashboardMain {
+  flex: 1;
+  padding: 3rem 2rem;
+  text-align: center;
+}
+
+.tagline {
+  margin-top: -0.5rem;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.cardGrid {
+  margin-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background-color: rgba(255,255,255,0.08);
+  border-radius: 12px;
+  padding: 2rem 1rem;
+  text-decoration: none;
+  color: #aceefe;
+  transition: transform 0.3s ease;
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  background-color: #04285d;
+}
+
+.cardIcon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  color: #82e6ff;
+}
+
+.dashboardFooter {
+  text-align: center;
+  padding: 1rem;
+  font-size: 0.9rem;
+  background: #021f44;
+  color: #aceefe;
+} */
+
+
+
+.sdContainer {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(to right, #04285d, #065c97);
+  color: #aceefe;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.sdHeader {
+  padding: 1.2rem 2rem;
+  background-color: #021f44;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.3);
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav a {
+  margin-left: 1.2rem;
+  text-decoration: none;
+  color: #aceefe;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.sdMain {
+  padding: 3rem 2rem;
+  text-align: center;
+  flex: 1;
+}
+
+.tagline {
+  margin-top: -0.5rem;
+  font-size: 1rem;
+  opacity: 0.85;
+}
+
+.tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.tile {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 14px;
+  padding: 2rem 1rem;
+  text-decoration: none;
+  color: #aceefe;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 8px 28px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, background-color 0.3s;
+}
+
+.tile:hover {
+  transform: translateY(-8px);
+  background-color: #053562;
+}
+
+.icon {
+  font-size: 2.2rem;
+  color: #82e6ff;
+  margin-bottom: 1rem;
+}
+
+.sdFooter {
+  padding: 1rem;
+  text-align: center;
+  background-color: #021f44;
+  font-size: 0.85rem;
+}
+

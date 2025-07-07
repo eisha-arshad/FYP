@@ -1,0 +1,68 @@
+/* .dlContainer {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #aceefe;
+}
+
+.dlList {
+  max-width: 520px;
+  margin: 2rem auto;
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dlItem {
+  background-color: #04285d;
+  padding: 1.2rem 1.4rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+  transition: transform 0.3s ease;
+}
+
+.dlItem:hover {
+  transform: scale(1.03);
+}
+
+.dlIcon {
+  font-size: 1.8rem;
+  color: #82e6ff;
+} */
+
+
+
+.deadlineContainer {
+  padding: 3rem 2rem;
+  text-align: center;
+  color: #aceefe;
+}
+
+.deadlineList {
+  list-style: none;
+  max-width: 600px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  padding: 0;
+}
+
+.card {
+  background: #04285d;
+  padding: 1.2rem 1.4rem;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.25);
+}
+
+.icon {
+  font-size: 1.6rem;
+  color: #82e6ff;
+}

@@ -1,0 +1,39 @@
+.dpContainer {
+  padding: 3rem 2rem;
+  color: #aceefe;
+  text-align: center;
+}
+
+.dpList {
+  max-width: 800px;
+  margin: 2rem auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.dpCard {
+  background: #04285d;
+  padding: 1.5rem;
+  border-radius: 14px;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  text-align: left;
+}
+
+.downloadBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 0.8rem;
+  background: #003d99;
+  color: white;
+  font-weight: 600;
+  padding: 10px 16px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+}
+
+.downloadBtn:hover {
+  background: #065c97;
+}
