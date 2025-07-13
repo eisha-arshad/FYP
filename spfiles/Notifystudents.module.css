@@ -1,0 +1,36 @@
+.notifyWrapper {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.studentList {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  margin-bottom: 1rem;
+}
+
+.messageBox {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.8rem;
+  margin-top: 0.5rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  resize: vertical;
+}
+
+.sendBtn {
+  margin-top: 1rem;
+  padding: 0.7rem 1rem;
+  border: none;
+  background-color: #04285d;
+  color: #fff;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.sendBtn:hover {
+  background-color: #01112c;
+}

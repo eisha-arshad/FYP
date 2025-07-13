@@ -1,0 +1,23 @@
+.reportsWrap {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.reportTable {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+.reportTable th {
+  background-color: #04285d;
+  color: white;
+  padding: 0.7rem;
+}
+
+.reportTable td {
+  padding: 0.7rem;
+  border-bottom: 1px solid #ccc;
+  text-align: center;
+}

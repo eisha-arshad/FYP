@@ -1,0 +1,68 @@
+.reviewProjectsWrapper {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  color: #aceefe;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.description {
+  font-size: 1rem;
+  margin-bottom: 2rem;
+}
+
+.projectList {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.projectCard {
+  background: linear-gradient(to right, #01112c, #04285d);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(255,255,255,0.1);
+}
+
+.actions {
+  margin-top: 1rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.actions button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background-color: #aceefe;
+  color: #04285d;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.actions button:hover {
+  background-color: #83dcf2;
+}
+
+/* 📱 Responsive */
+@media screen and (max-width: 768px) {
+  .reviewProjectsWrapper {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .projectList {
+    grid-template-columns: 1fr;
+  }
+
+  .actions button {
+    width: 100%;
+  }
+}

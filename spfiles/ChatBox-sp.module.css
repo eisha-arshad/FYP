@@ -1,0 +1,224 @@
+/* .spChatWrapper {
+  border: 1px solid #bfcdd4;
+  border-radius: 10px;
+  padding: 20px;
+  background-color: #eef5f9;
+  max-width: 650px;
+  margin: 20px auto;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.spChatHeader {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: 12px;
+  color: #2e4053;
+}
+
+.spChatMessages {
+  max-height: 280px;
+  overflow-y: auto;
+  margin-bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.spStudentMessage {
+  background-color: #fdebd0;
+  padding: 10px 14px;
+  border-radius: 10px;
+  align-self: flex-start;
+  width: fit-content;
+}
+
+.spSupervisorMessage {
+  background-color: #d1f2eb;
+  padding: 10px 14px;
+  border-radius: 10px;
+  align-self: flex-end;
+  width: fit-content;
+}
+
+.spChatInputRow {
+  display: flex;
+  gap: 10px;
+}
+
+.spChatInput {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: 6px;
+  border: 1px solid #999;
+  font-size: 0.95rem;
+}
+
+.spSendButton {
+  padding: 8px 16px;
+  background-color: #2e86c1;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.spSendButton:hover {
+  background-color: #1f618d;
+}
+
+
+@media screen and (max-width: 600px) {
+  .spChatWrapper {
+    margin: 10px;
+    padding: 15px;
+  }
+
+  .spChatInputRow {
+    flex-direction: column;
+  }
+
+  .spSendButton {
+    width: 100%;
+  }
+} */
+
+.spChatIcon {
+  position: fixed;
+  bottom: 20px;
+  right: 25px;
+  background-color: #2e86c1;
+  color: white;
+  padding: 12px;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  box-shadow: 0 3px 12px rgba(0,0,0,0.15);
+  z-index: 999;
+  transition: background 0.3s ease;
+}
+
+.spChatIcon:hover {
+  background-color: #1f618d;
+}
+
+.spChatPopup {
+  position: fixed;
+  bottom: 80px;
+  right: 25px;
+  z-index: 998;
+  max-width: 420px;
+  width: 100%;
+}
+
+/* ChatBox Styling */
+.spChatWrapper {
+  background-color: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.spChatHeader {
+  font-size: 1.2rem;
+  font-weight: bold;
+  text-align: center;
+  margin-bottom: 15px;
+  color: #154360;
+}
+
+.spMessageArea {
+  max-height: 300px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-bottom: 20px;
+}
+
+.spMsgLeft, .spMsgRight {
+  padding: 12px;
+  border-radius: 10px;
+  max-width: 75%;
+}
+
+.spMsgLeft {
+  background-color: #fdebd0;
+  align-self: flex-start;
+}
+
+.spMsgRight {
+  background-color: #d5f5e3;
+  align-self: flex-end;
+}
+
+.spMeta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  margin-bottom: 6px;
+  color: #555;
+}
+
+.spAvatar {
+  font-size: 1rem;
+}
+
+.spTimestamp {
+  font-style: italic;
+}
+
+.spText {
+  font-size: 0.95rem;
+  color: #1c2833;
+}
+
+.spInputRow {
+  display: flex;
+  gap: 10px;
+}
+
+.spInput {
+  flex-grow: 1;
+  padding: 10px;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  font-size: 0.95rem;
+}
+
+.spSendBtn {
+  background-color: #2e86c1;
+  color: white;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.spSendBtn:hover {
+  background-color: #1f618d;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 600px) {
+  .spChatIcon {
+    bottom: 15px;
+    right: 15px;
+    font-size: 1.3rem;
+  }
+
+  .spChatPopup {
+    right: 15px;
+    bottom: 70px;
+    max-width: 95%;
+  }
+
+  .spInputRow {
+    flex-direction: column;
+  }
+
+  .spSendBtn {
+    width: 100%;
+  }
+}

@@ -1,0 +1,32 @@
+.guidelinesWrapper {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 12px;
+  color: #aceefe;
+}
+
+.title {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.guidelineList {
+  list-style: disc inside;
+  line-height: 1.8;
+  padding-left: 1rem;
+}
+
+/* 📱 Responsive */
+@media screen and (max-width: 768px) {
+  .guidelinesWrapper {
+    padding: 1rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .guidelineList {
+    line-height: 1.6;
+  }
+}

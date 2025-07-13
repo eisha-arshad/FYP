@@ -1,0 +1,34 @@
+.deadlineCard {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 450px;
+}
+
+.deadlineCard h2 {
+  margin-bottom: 1rem;
+}
+
+.deadlineCard label {
+  display: block;
+  margin-bottom: 1rem;
+  color: #04285d;
+}
+
+.deadlineCard input {
+  display: block;
+  margin-top: 0.3rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  width: 100%;
+}
+
+.deadlineCard button {
+  background: #04285d;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
