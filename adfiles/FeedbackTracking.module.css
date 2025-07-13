@@ -1,0 +1,75 @@
+.fbWrapper {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  border-radius: 12px;
+  color: #aceefe;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.fbTitle {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.fbTable {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.fbHeader {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  font-weight: bold;
+  padding: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.fbRow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 0.8rem;
+  background-color: #01112c;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.fbRow:hover {
+  background-color: #04285d;
+}
+
+.fbBtn {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #aceefe;
+  color: #04285d;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.fbBtn:hover {
+  background-color: #83dcf2;
+}
+
+/* 📱 Responsive Design */
+@media screen and (max-width: 768px) {
+  .fbHeader, .fbRow {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem;
+  }
+
+  .fbWrapper {
+    padding: 1rem;
+  }
+
+  .fbTitle {
+    font-size: 1.5rem;
+  }
+
+  .fbBtn {
+    width: 100%;
+  }
+}

@@ -3,67 +3,102 @@ import { Link } from 'react-router-dom';
 import Bg1 from '../../../assets/images/bg.jpg';
 import LogoImg from '../../../assets/images/logo.jpg';
 import HeroVideo from '../../../assets/images/hero.mp4';
-import './Landing.css';
+import styles from './Landing.module.css';
 
 function Landing() {
   return (
-    <div id="landing">
+    <div id="landing" className={styles.ldContainer}>
       {/* Header */}
-      <header className="navbar">
-        <div className="logo">
+      <header className={styles.ldNavbar}>
+        <div className={styles.ldLogo}>
           <img src={LogoImg} alt="Header" />
-          <span className="brand-text">UniSnap</span>
+          <span className={styles.ldBrandText}>UniSnap</span>
         </div>
-        <nav className="nav-links">
-          <Link to="/">Home</Link>
-          <Link to="/features">Features</Link>
-          <Link to="/contact">Contact</Link>
-          <Link to="/login" className="btn">Login</Link>
+        <nav className={styles.ldNavLinks}>
+          <Link to="/student-dashboard">Home</Link>
+          <Link to="/supervisor-dashboard">Features</Link>
+          <Link to="/admin-dashboard">Contact</Link>
+          <Link to="/login" className={styles.ldBtn}>Login</Link>
         </nav>
       </header>
 
-      {/* 🔥 HERO SECTION */}
-      <section className="hero-section-overlay">
-        <video className="bg-video" autoPlay muted loop playsInline>
+      {/* Hero Section */}
+      <section className={styles.ldHeroSection}>
+        <video className={styles.ldBgVideo} autoPlay muted loop playsInline>
           <source src={HeroVideo} type="video/mp4" />
         </video>
 
-        <div className="hero-content">
-          <h1 className="hero-heading">Empower Your Projects <br></br> Elevate Your Future</h1>
-          <p className="hero-subheading">Submit, collaborate, and succeed on one modern platform.</p>
+        <div className={styles.ldHeroContent}>
+          <h1 className={styles.ldHeroHeading}>
+            Empower Your Projects <br /> Elevate Your Future
+          </h1>
+          <p className={styles.ldHeroSubheading}>
+            Submit, collaborate, and succeed on one modern platform.
+          </p>
 
-          <div className="signup-button-row">
-            <Link to="/student-agreement" className="signup-button">
-              <div className="signup-icon">🎓</div>
+          <div className={styles.ldSignupRow}>
+            <Link to="/student-agreement" className={styles.ldSignupBtn}>
+              <div className={styles.ldSignupIcon}>🎓</div>
               <span>SignUp as Student</span>
             </Link>
-            <Link to="/signup/supervisor" className="signup-button">
-              <div className="signup-icon">👨‍🏫</div>
+            <Link to="/signup/supervisor" className={styles.ldSignupBtn}>
+              <div className={styles.ldSignupIcon}>👨‍🏫</div>
               <span>SignUp as Supervisor</span>
             </Link>
-            <Link to="/signup/admin" className="signup-button">
-              <div className="signup-icon">🛠️</div>
+            <Link to="/signup/admin" className={styles.ldSignupBtn}>
+              <div className={styles.ldSignupIcon}>🛠️</div>
               <span>SignUp as Admin</span>
             </Link>
           </div>
         </div>
       </section>
 
-      {/* Why Choose Us */}
-      <section className="features features-bg"
-      //  style={{ backgroundImage: `url(${Bg1})` }}
-        >
+      {/* Features */}
+      <section className={styles.ldFeatures} >
+        {/* style={{ backgroundImage: `url(${Bg1})` }} */}
         <h2>Why Choose Us?</h2>
-        <div className="feature-grid">
+        <div className={styles.ldFeatureGrid}>
           <Feature icon="📁" title="Easy Submissions" desc="Upload deliverables with version control." />
           <Feature icon="🔔" title="Real-Time Alerts" desc="Never miss a submission deadline." />
           <Feature icon="💬" title="Live Feedback" desc="Get responses directly from your supervisor." />
         </div>
       </section>
 
+      
+      {/* New Section: Workflow Overview */}
+      <section className={styles.ldFlow}>
+        <div className={styles.ldFlowGrid}>
+          <div className={styles.ldFlowText}>
+            <h2>📌 How It Works</h2>
+            <p>
+              Submit your proposals, track your deadlines, and get feedback – all
+              in one dashboard. Supervisors review. Admins oversee. You stay focused.
+            </p>
+            <Link to="/login" className={styles.ldFlowBtn}>View Dashboard</Link>
+          </div>
+          <div className={styles.ldFlowCard}>
+            <ul>
+              <li><span>🎓</span> Student uploads project</li>
+              <li><span>👨‍🏫</span> Supervisor reviews submission</li>
+              <li><span>📊</span> Admin monitors deadlines</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      {/* New Section: Role Spotlight */}
+      <section className={styles.ldRoles}>
+        <h2>Role Spotlight</h2>
+        <div className={styles.ldRoleCards}>
+          <Role icon="🎓" title="Students" detail="Submit projects, get feedback, and track deadlines." />
+          <Role icon="👨‍🏫" title="Supervisors" detail="Review files, add feedback, and communicate progress." />
+          <Role icon="🛡️" title="Admins" detail="Manage users, send updates, and monitor project health." />
+        </div>
+      </section>
+
       {/* Footer */}
-      <footer className="footer">
-        <div className="footer-grid">
+      <footer className={styles.ldFooter}>
+        <div className={styles.ldFooterGrid}>
           <div>
             <h4>Quick Links</h4>
             <ul>
@@ -84,7 +119,7 @@ function Landing() {
             <p>GitHub | LinkedIn | Facebook</p>
           </div>
         </div>
-        <div className="legal">
+        <div className={styles.ldLegal}>
           <p>© 2025 University of Lahore | Privacy Policy | Terms</p>
         </div>
       </footer>
@@ -93,14 +128,20 @@ function Landing() {
 }
 
 const Feature = ({ icon, title, desc }) => (
-  <div className="feature-card">
-    <div className="icon">{icon}</div>
+  <div className={styles.ldFeatureCard}>
+    <div className={styles.ldIcon}>{icon}</div>
     <h3>{title}</h3>
     <p>{desc}</p>
   </div>
 );
 
+const Role = ({ icon, title, detail }) => (
+  <div className={styles.ldRoleCard}>
+    <span className={styles.ldRoleIcon}>{icon}</span>
+    <h3>{title}</h3>
+    <p>{detail}</p>
+  </div>
+);
+
 export default Landing;
-
-
 

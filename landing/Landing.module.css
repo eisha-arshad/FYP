@@ -1,0 +1,426 @@
+/* body,html {
+  margin: 0;
+  padding: 0;
+} */
+
+/* HEADER */
+.ldNavbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  background: #04285d;
+}
+
+.ldLogo {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.ldLogo img {
+  height: 44px;
+  width: auto;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.ldBrandText {
+  font-size: 20px;
+  font-weight: 700;
+  color: #aceefe;
+  letter-spacing: 0.5px;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.ldNavLinks {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.ldNavLinks a {
+  text-decoration: none;
+  color: #aceefe;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.ldNavLinks a:hover {
+  color: #2563eb;
+}
+
+.ldNavLinks .ldBtn {
+  background-color: #aceefe;
+  color: #04285d;
+  padding: 0.5rem 1.2rem;
+  border-radius: 6px;
+  transition: background-color 0.3s ease;
+}
+
+.ldNavLinks .ldBtn:hover {
+  background-color: #2563eb;
+  color: #aceefe;
+  border-color: #aceefe;
+}
+
+/* HERO SECTION */
+.ldHeroSection {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #aceefe;
+}
+
+.ldBgVideo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+  filter: brightness(0.5);
+}
+
+.ldHeroContent {
+  z-index: 1;
+  max-width: 100%;
+  padding: 0;
+}
+
+.ldHeroHeading {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.ldHeroSubheading {
+  font-size: 1.4rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+
+.ldSignupRow {
+  display: flex;
+  justify-content: space-evenly;
+  gap: 3rem;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.ldSignupBtn {
+  background: rgba(255, 255, 255, 0.1);
+  border: 2px solid #04285d;
+  color: #aceefe;
+  padding: 1rem;
+  border-radius: 12px;
+  width: 200px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-weight: 700;
+}
+
+.ldSignupBtn:hover {
+  background: #04285d;
+  border-color: #aceefe;
+}
+
+.ldSignupIcon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* FEATURES */
+.ldFeatures {
+  text-align: center;
+  padding: 4rem 2rem;
+  /* background-color: #aceefe; */
+    background: linear-gradient(to right, #04285d, #aceefe);
+  /* background: linear-gradient(to right, #11a567, #aceefe); */
+    /* background: linear-gradient(to right, #136aed, #aceefe); */
+  color: #04285d;
+  background-size: cover;
+  background-position: center;
+}
+
+.ldFeatureGrid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.ldFeatureCard {
+  background: #04285d;
+  padding: 1.5rem;
+  border-radius: 10px;
+  color: #aceefe;
+  flex: 1 1 280px;
+  min-height: 150px;
+  max-width: 300px;
+}
+
+.ldFeatureCard .ldIcon {
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+}
+
+/* FOOTER */
+.ldFooter {
+  background: #04285d;
+  color: #aceefe;
+  padding: 2rem;
+}
+
+.ldFooterGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 2rem;
+}
+
+.ldFooter h4 {
+  margin-bottom: 1rem;
+}
+
+.ldFooterGrid p,
+.ldFooterGrid li {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  list-style: none;
+}
+
+.ldLegal {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #aceefe;
+}
+
+/* RESPONSIVE */
+@media (max-width: 1024px) {
+  .ldNavbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1rem;
+  }
+
+  .ldNavLinks {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 0.5rem;
+  }
+
+  .ldSignupRow {
+    gap: 2rem;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+  .ldHeroHeading {
+    font-size: 2.2rem;
+  }
+
+  .ldHeroSubheading {
+    font-size: 1.1rem;
+  }
+
+  .ldSignupBtn {
+    width: 160px;
+    padding: 0.8rem;
+    font-size: 0.95rem;
+  }
+
+  .ldFeatureCard {
+    max-width: 90%;
+  }
+
+  .ldFooterGrid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .ldNavbar {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+
+@media (max-width: 480px) {
+  .ldNavbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .ldNavLinks {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: flex-start;
+  }
+
+  .ldHeroHeading {
+    font-size: 1.8rem;
+  }
+
+  .ldHeroSubheading {
+    font-size: 1rem;
+  }
+
+  .ldSignupRow {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ldSignupBtn {
+    width: 90%;
+    max-width: 300px;
+  }
+
+  .ldFeatureGrid {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .ldFooterGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+
+/* Workflow Section */
+.ldFlow {
+  padding: 60px 20px;
+  /* background-color: #ffffff; */
+  background: linear-gradient(to right, #aceefe , #04285d);
+}
+
+.ldFlowGrid {
+  display: flex;
+  gap: 40px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.ldFlowText {
+  flex: 1;
+  max-width: 400px;
+}
+
+.ldFlowText h2 {
+  font-size: 1.8rem;
+  margin-bottom: 12px;
+  color: #154360;
+}
+
+.ldFlowText p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 18px;
+}
+
+.ldFlowBtn {
+  background-color: #2874a6;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+.ldFlowCard {
+  background-color: #f4f6f7;
+  border-radius: 10px;
+  padding: 20px;
+  max-width: 350px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.ldFlowCard ul {
+  list-style: none;
+  padding: 0;
+}
+
+.ldFlowCard li {
+  font-size: 0.95rem;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+/* Role Section */
+.ldRoles {
+  padding: 60px 20px;
+  text-align: center;
+  background: linear-gradient(to right, #04285d, #aceefe);
+}
+
+.ldRoleCards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+.ldRoleCard {
+  background-color: #f9fcff;
+  border-radius: 12px;
+  padding: 25px;
+  max-width: 240px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+  transition: transform 0.3s ease;
+}
+
+.ldRoleCard:hover {
+  transform: translateY(-5px);
+}
+
+.ldRoleIcon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 12px;
+}
+
+.ldRoleCard h3 {
+  font-size: 1.1rem;
+  margin-bottom: 10px;
+  color: #2c3e50;
+}
+
+.ldRoleCard p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+/* Responsive */
+@media screen and (max-width: 600px) {
+  .ldFlowGrid {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .ldRoleCards {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+ 
+}

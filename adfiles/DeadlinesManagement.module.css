@@ -1,0 +1,73 @@
+.dmWrapper {
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 2rem;
+  border-radius: 12px;
+  color: #aceefe;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.dmTitle {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.dmForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+  background: linear-gradient(to right, #01112c, #04285d);
+  padding: 1.5rem;
+  border-radius: 10px;
+}
+
+.dmForm label {
+  display: flex;
+  flex-direction: column;
+  font-weight: 600;
+  gap: 0.4rem;
+}
+
+.dmForm input[type="date"] {
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: none;
+  background-color: #aceefe;
+  color: #04285d;
+  font-weight: bold;
+}
+
+.dmBtn {
+  margin-top: 1rem;
+  align-self: flex-start;
+  padding: 0.5rem 1rem;
+  background-color: #aceefe;
+  color: #04285d;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.dmBtn:hover {
+  background-color: #83dcf2;
+}
+
+/* 📱 Responsive Design */
+@media screen and (max-width: 768px) {
+  .dmWrapper {
+    padding: 1rem;
+  }
+
+  .dmTitle {
+    font-size: 1.5rem;
+  }
+
+  .dmForm {
+    padding: 1rem;
+  }
+
+  .dmBtn {
+    width: 100%;
+  }
+}

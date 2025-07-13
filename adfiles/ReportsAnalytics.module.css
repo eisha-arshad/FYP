@@ -1,0 +1,74 @@
+.raWrapper {
+  background-color: rgba(255,255,255,0.08);
+  padding: 2rem;
+  border-radius: 12px;
+  color: #aceefe;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.raTitle {
+  font-size: 1.8rem;
+  margin-bottom: 1.2rem;
+}
+
+.raOverview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(to right, #01112c, #04285d);
+  padding: 1rem;
+  border-radius: 8px;
+  margin-bottom: 1.5rem;
+}
+
+.raBtn {
+  padding: 0.5rem 1rem;
+  background-color: #aceefe;
+  color: #04285d;
+  font-weight: bold;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.raBtn:hover {
+  background-color: #83dcf2;
+}
+
+.raChart {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.raChart h3 {
+  margin-bottom: 0.8rem;
+}
+
+.raList {
+  list-style: disc inside;
+  padding-left: 1rem;
+  line-height: 1.7;
+}
+
+/* 📱 Responsive */
+@media screen and (max-width: 768px) {
+  .raWrapper {
+    padding: 1rem;
+  }
+
+  .raTitle {
+    font-size: 1.5rem;
+  }
+
+  .raOverview {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  .raBtn {
+    width: 100%;
+  }
+}

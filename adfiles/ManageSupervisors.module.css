@@ -1,0 +1,80 @@
+.msWrapper {
+  background-color: rgba(255,255,255,0.08);
+  padding: 2rem;
+  border-radius: 12px;
+  color: #aceefe;
+}
+
+.msTitle {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.msTable {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.msHeader {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  font-weight: bold;
+  padding: 0.8rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+}
+
+.msRow {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  padding: 0.8rem;
+  background-color: #01112c;
+  border-radius: 6px;
+  transition: background 0.3s ease;
+}
+
+.msRow:hover {
+  background-color: #04285d;
+}
+
+.msActions {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.msActions button {
+  padding: 0.4rem 0.8rem;
+  border: none;
+  border-radius: 6px;
+  background-color: #aceefe;
+  color: #04285d;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.msActions button:hover {
+  background-color: #83dcf2;
+}
+
+/* 📱 Responsive */
+@media screen and (max-width: 768px) {
+  .msHeader, .msRow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.8rem;
+  }
+
+  .msActions {
+    flex-direction: column;
+  }
+
+  .msWrapper {
+    padding: 1rem;
+  }
+
+  .msTitle {
+    font-size: 1.5rem;
+  }
+}
