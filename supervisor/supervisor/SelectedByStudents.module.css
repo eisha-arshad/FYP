@@ -1,0 +1,61 @@
+.wrapper {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2.5rem;
+  background-color: #f8fbff;
+  border-radius: 16px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.heading {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: center;
+  color: #04285d;
+  margin-bottom: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+}
+
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
+}
+
+.card h3 {
+  color: #1f3c88;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  color: #444;
+  margin: 0.4rem 0;
+}
+
+.message {
+  background-color: #e0f0ff;
+  border-left: 4px solid #2563eb;
+  padding: 0.6rem 1rem;
+  margin-top: 1rem;
+  border-radius: 8px;
+  color: #1e3a8a;
+  font-weight: 500;
+}
+
+.icon {
+  margin-right: 0.5rem;
+  color: #2563eb;
+}

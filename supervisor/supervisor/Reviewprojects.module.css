@@ -1,0 +1,120 @@
+.reviewWrapper {
+  padding: 2rem;
+  background: #f9fafb;
+  min-height: 100vh;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #1f2937;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.searchInput {
+  padding: 10px 14px;
+  border: 1px solid #cbd5e0;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 350px;
+  outline: none;
+}
+
+.tableContainer {
+  overflow-x: auto;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  background: #fff;
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+  min-width: 800px;
+}
+
+.table th {
+  background: #f1f5f9;
+  padding: 14px;
+  text-align: left;
+  color: #1f2937;
+  font-weight: 600;
+}
+
+.table td {
+  padding: 12px 14px;
+  border-top: 1px solid #e5e7eb;
+  color: #374151;
+  vertical-align: top;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.selectInput,
+.commentBox {
+  width: 100%;
+  padding: 8px 10px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.selectInput {
+  background-color: #fff;
+}
+
+.commentBox {
+  resize: vertical;
+  min-height: 40px;
+  max-height: 100px;
+}
+
+.btnGroup {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+  flex-wrap: wrap;
+}
+
+.approveBtn {
+  background-color: #22c55e;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.approveBtn:hover {
+  background-color: #16a34a;
+}
+
+.rejectBtn {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 6px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.rejectBtn:hover {
+  background-color: #dc2626;
+}
