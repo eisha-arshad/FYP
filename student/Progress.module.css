@@ -1,0 +1,333 @@
+/* .container {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 3rem;
+  background-color: #e6f2fb;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+  text-align: center;
+  color: #04285d;
+  font-size: 2rem;
+  margin-bottom: 3rem;
+  font-weight: 700;
+}
+
+.overallProgress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(#0094ff 0% 70%, #fff 70% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0094ff;
+  position: relative;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background-color: #e6f2fb;
+  border-radius: 50%;
+}
+
+.circle span {
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0094ff;
+}
+
+.milestones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.step {
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+
+.stepCircle {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #0094ff;
+  margin: 0 auto;
+  color: #0094ff;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.stepCircle.completed {
+  background-color: #0094ff;
+  color: white;
+}
+
+.stepLabel {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #04285d;
+  font-weight: 500;
+}
+
+.progressLines {
+  position: absolute;
+  top: 20px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0094ff;
+  z-index: -1;
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+
+.barItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.barLabel {
+  font-size: 0.95rem;
+  color: #04285d;
+  font-weight: 500;
+}
+
+.barOuter {
+  height: 14px;
+  width: 100%;
+  background-color: #cbe7ff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.barInner {
+  height: 100%;
+  background-color: #0094ff;
+  transition: width 0.4s ease;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .milestones {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .bars {
+    gap: 1.2rem;
+  }
+} */
+.container {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 3rem;
+  background-color: #e6f2fb;
+  border-radius: 12px;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+}
+
+h2 {
+  text-align: center;
+  color: #04285d;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.subtext {
+  text-align: center;
+  color: #446;
+  margin-bottom: 2rem;
+  font-size: 0.95rem;
+}
+
+.overallProgress {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.circle {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: conic-gradient(#0094ff 0% 70%, #fff 70% 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #0094ff;
+  position: relative;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  width: 90px;
+  height: 90px;
+  background-color: #e6f2fb;
+  border-radius: 50%;
+}
+
+.circle span {
+  position: absolute;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0094ff;
+}
+
+.milestones {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.step {
+  text-align: center;
+  flex: 1;
+  position: relative;
+}
+
+.stepCircle {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: #fff;
+  border: 2px solid #0094ff;
+  margin: 0 auto;
+  color: #0094ff;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.1rem;
+}
+
+.stepCircle.completed {
+  background-color: #0094ff;
+  color: white;
+}
+
+.stepLabel {
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  color: #04285d;
+  font-weight: 500;
+}
+
+.progressLines {
+  position: absolute;
+  top: 22px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #0094ff;
+  z-index: -1;
+}
+
+.bars {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 3rem;
+}
+
+.barItem {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.barLabel {
+  font-size: 0.95rem;
+  color: #04285d;
+  font-weight: 500;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.status {
+  font-size: 0.75rem;
+  padding: 2px 8px;
+  border-radius: 20px;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+.green {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.orange {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.red {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.barOuter {
+  height: 14px;
+  width: 100%;
+  background-color: #cbe7ff;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+.barInner {
+  height: 100%;
+  background-color: #0094ff;
+  transition: width 0.4s ease;
+  border-radius: 20px;
+}
+
+@media (max-width: 768px) {
+  .milestones {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .bars {
+    gap: 1.2rem;
+  }
+}

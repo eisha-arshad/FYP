@@ -1,0 +1,98 @@
+.submitWrapper {
+  background: #f9f9f9;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.heading {
+  font-size: 1.8rem;
+  color: #2563eb;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.formGroup label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: #1f2937;
+}
+
+.formGroup input,
+.formGroup textarea,
+.formGroup select {
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  background-color: #fff;
+  transition: border 0.3s;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus,
+.formGroup select:focus {
+  border-color: #2563eb;
+  outline: none;
+}
+
+.formGroup textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.uploadField {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.uploadField input[type='file'] {
+  border: none;
+  padding: 0;
+  font-size: 0.9rem;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 30px;
+}
+
+.submitBtn {
+  background-color: #2563eb;
+  color: #fff;
+  padding: 10px 22px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.submitBtn:hover {
+  background-color: #1e40af;
+}
+
+.resetBtn {
+  background-color: #e5e7eb;
+  color: #111827;
+  padding: 10px 22px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.resetBtn:hover {
+  background-color: #d1d5db;
+}
