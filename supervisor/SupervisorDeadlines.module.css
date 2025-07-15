@@ -1,0 +1,164 @@
+/* .deadlineCard {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  max-width: 450px;
+}
+
+.deadlineCard h2 {
+  margin-bottom: 1rem;
+}
+
+.deadlineCard label {
+  display: block;
+  margin-bottom: 1rem;
+  color: #04285d;
+}
+
+.deadlineCard input {
+  display: block;
+  margin-top: 0.3rem;
+  padding: 0.6rem;
+  border-radius: 6px;
+  border: 1px solid #bbb;
+  width: 100%;
+}
+
+.deadlineCard button {
+  background: #04285d;
+  color: #fff;
+  padding: 0.6rem 1.2rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+} */
+ .supervisorDeadlines {
+  padding: 2rem;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f5f9ff;
+  min-height: 100vh;
+  color: #04285d;
+}
+
+.pageTitle {
+  font-size: 1.9rem;
+  font-weight: bold;
+  color: #003d99;
+  margin-bottom: 1.5rem;
+}
+
+.addDeadlineForm {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  background: #fff;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.06);
+  margin-bottom: 2rem;
+}
+
+.addDeadlineForm input {
+  padding: 10px 14px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+  flex: 1;
+  min-width: 160px;
+}
+
+.addDeadlineForm button {
+  padding: 10px 20px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.addDeadlineForm button:hover {
+  background-color: #1e3a8a;
+}
+
+.deadlineList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.2rem;
+}
+
+.deadlineCard {
+  background: white;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  transition: transform 0.2s;
+}
+
+.deadlineCard:hover {
+  transform: translateY(-3px);
+}
+
+.deadlineInfo {
+  max-width: 80%;
+}
+
+.deadlineInfo h4 {
+  margin: 0;
+  font-size: 1.2rem;
+  color: #04285d;
+}
+
+.deadlineInfo p {
+  margin: 6px 0;
+  color: #374151;
+  font-size: 0.95rem;
+}
+
+.actions {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.actions button {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  padding: 6px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.actions button:hover {
+  background-color: #b91c1c;
+}
+
+.noData {
+  text-align: center;
+  margin-top: 2rem;
+  font-style: italic;
+  color: #6b7280;
+}
+
+@media (max-width: 600px) {
+  .addDeadlineForm {
+    flex-direction: column;
+  }
+
+  .deadlineCard {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .actions {
+    flex-direction: row;
+    justify-content: flex-end;
+  }
+}
