@@ -1,33 +1,136 @@
-// AdminLayout.jsx
+
+
+
+
+// import React, { useState, useRef, useEffect } from 'react';
+// import { Link, useNavigate, Outlet } from 'react-router-dom';
+// import styles from './AdminDashboard.module.css';
+// import { FaSearch, FaBell, FaChevronDown } from 'react-icons/fa';
+// import ProfileImg from "../../assets/images/profile.png";
+// import LogoImg from "../../assets/images/logo.png";
+
+// const AdminDashboard = () => {
+//   const [showProfileOptions, setShowProfileOptions] = useState(false);
+//   const [showLogoutDialog, setShowLogoutDialog] = useState(false);
+//   const dropdownRef = useRef(null);
+//   const navigate = useNavigate();
+
+//   useEffect(() => {
+//     const handleClickOutside = (event) => {
+//       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+//         setShowProfileOptions(false);
+//       }
+//     };
+//     document.addEventListener('mousedown', handleClickOutside);
+//     return () => document.removeEventListener('mousedown', handleClickOutside);
+//   }, []);
+
+//   const handleLogout = () => {
+//     setShowLogoutDialog(true);
+//     setShowProfileOptions(false);
+//   };
+
+//   const confirmLogout = () => {
+//     setShowLogoutDialog(false);
+//     navigate('/login');
+//   };
+
+//   return (
+//     <div className={styles.dashboard}>
+//       <aside className={styles.sidebar}>
+//         <div className={styles.logoContainer}>
+//           <img src={LogoImg} alt="Logo" className={styles.logoImage} />
+//         </div>
+//         <nav className={styles.nav}>
+//           {/* <Link to="/admin-dashboard/createusers">👨‍🎓 Create Users</Link>
+//           <Link to="/admin-dashboard/manage-users">🧑‍🏫 Manage Users</Link> */}
+//           <Link to="createusers">👨‍🎓 Create Users</Link>
+//           <Link to="manage-users">🧑‍🏫 Manage Users</Link>
+//           <Link to="all-projects">👨‍🎓 All Projects</Link>
+          
+
+
+//         </nav>
+//         <button className={styles.logout} onClick={handleLogout}>Logout</button>
+//       </aside>
+
+//       <main className={styles.main}>
+//         <header className={styles.header}>
+//           <div className={styles.searchBox}>
+//             <FaSearch />
+//             <input type="text" placeholder="Search..." />
+//           </div>
+
+//           <div className={styles.profileSection} ref={dropdownRef}>
+//             <FaBell className={styles.bellIcon} />
+//             <div
+//               className={styles.profile}
+//               onClick={() => setShowProfileOptions((prev) => !prev)}
+//             >
+//               <img src={ProfileImg} alt="Admin Profile" />
+//               <div>
+//                 <strong>Admin Name</strong>
+//                 <span>Administrator</span>
+//               </div>
+//               <FaChevronDown />
+//             </div>
+
+//             {showProfileOptions && (
+//               <div className={styles.dropdown}>
+//                 <button onClick={() => navigate('/admin-profile')}>👤 View Profile</button>
+//                 <button onClick={() => navigate('/admin-edit')}>✏️ Edit Profile</button>
+//                 <button onClick={handleLogout}>🚪 Logout</button>
+//               </div>
+//             )}
+//           </div>
+//         </header>
+
+//         <div className={styles.content}>
+//           <Outlet />
+//         </div>
+//       </main>
+
+//       {showLogoutDialog && (
+//         <div className={styles.dialogOverlay}>
+//           <div className={styles.dialogBox}>
+//             <h3>⚠️ Confirm Logout</h3>
+//             <p>Do you want to logout?</p>
+//             <div className={styles.dialogActions}>
+//               <button onClick={confirmLogout}>Yes</button>
+//               <button onClick={() => setShowLogoutDialog(false)}>No</button>
+//             </div>
+//           </div>
+//         </div>
+//       )}
+//     </div>
+//   );
+// };
+
+// export default AdminDashboard;
+
 import React, { useState, useRef, useEffect } from 'react';
-import { useNavigate, Outlet } from 'react-router-dom';
+import { Link, useNavigate, Outlet } from 'react-router-dom';
 import styles from './AdminDashboard.module.css';
-// import ChatPanel from '../stfiles/ChatBox';
+import { FaSearch, FaBell, FaChevronDown } from 'react-icons/fa';
+import ProfileImg from "../../assets/images/profile.png";
+import LogoImg from "../../assets/images/logo.png";
 
-import {
-  FaUserGraduate,
-  FaChalkboardTeacher,
-  FaClipboardCheck,
-  FaClock,
-  FaCommentDots,
-  FaFileExport,
-  FaBullhorn,
-  FaSearch,
-  FaBell,
-  FaChevronDown,
-  FaSignOutAlt,
-  FaUser,
-} from 'react-icons/fa';
-import ProfileImg from '../../assets/images/db12.png';
-import LogoImg from '../../assets/images/user1.jpg';
-
-function AdminLayout() {
-  const navigate = useNavigate();
-   const [showChat, setShowChat] = useState(false);
+const AdminDashboard = () => {
   const [showProfileOptions, setShowProfileOptions] = useState(false);
   const [showLogoutDialog, setShowLogoutDialog] = useState(false);
   const dropdownRef = useRef(null);
+  const navigate = useNavigate();
 
+  // Require auth: if no token, go to login (replace)
+  useEffect(() => {
+    const access = localStorage.getItem('access');
+    const role = localStorage.getItem('role');
+    if (!access || role !== 'admin') {
+      navigate('/login', { replace: true });
+    }
+  }, [navigate]);
+
+  // Close dropdown on outside click
   useEffect(() => {
     const handleClickOutside = (event) => {
       if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
@@ -44,62 +147,51 @@ function AdminLayout() {
   };
 
   const confirmLogout = () => {
-    setShowLogoutDialog(false);
-    navigate('/');
-  };
+  localStorage.removeItem('access');
+  localStorage.removeItem('refresh');
+  localStorage.removeItem('role');
+  setShowLogoutDialog(false);
+  navigate('/login', { replace: true });
+};
+
 
   return (
-    <div className={styles.adminWrapper}>
-      <aside className={styles.adminSidebar}>
-        <div className={styles.adminTopBar}>
-          <div className={styles.adminLogo}>
-          🛡️ UniSnap</div>
+    <div className={styles.dashboard}>
+      <aside className={styles.sidebar}>
+        <div className={styles.logoContainer}>
+          <img src={LogoImg} alt="Logo" className={styles.logoImage} />
         </div>
-
-        <nav className={styles.adminNav}>
-          <div className={styles.adminNavItem} onClick={() => navigate('create-users')}><FaUser />Create Users</div>
-          <div className={styles.adminNavItem} onClick={() => navigate('manage-users')}><FaUserGraduate /> Manage Users</div>
-          <div className={styles.adminNavItem} onClick={() => navigate('manage-supervisors')}><FaChalkboardTeacher /> Manage Supervisors</div>
-          <div className={styles.adminNavItem} onClick={() => navigate('submissions')}><FaClipboardCheck /> Submissions</div>
-          <div className={styles.adminNavItem} onClick={() => navigate('deadlines')}><FaClock /> Deadlines</div>
-          <div className={styles.adminNavItem} onClick={() => navigate('feedback')}><FaCommentDots /> Feedback</div>
-          <div className={styles.adminNavItem} onClick={() => navigate('reports')}><FaFileExport /> Reports</div>
-          <div className={styles.adminNavItem} onClick={() => navigate('announcements')}><FaBullhorn /> Announcements</div>
-          <div className={styles.adminNavItem} onClick={() => navigate('proposal-manage')}><FaCommentDots /> Proposal Manager</div>
-          <div className={styles.adminNavItem} onClick={() => navigate('activity')}><FaFileExport /> Activity Log</div>
-          <div className={styles.adminNavItem} onClick={() => navigate('admin-settings')}><FaBullhorn /> Admin Settings</div>
-    
-        
+        <nav className={styles.nav}>
+          <Link to="createusers">👨‍🎓 Create Users</Link>
+          <Link to="manage-users">🧑‍🏫 Manage Users</Link>
+          <Link to="all-projects">👨‍🎓 All Projects</Link>
         </nav>
-
-        <div className={styles.adminFooter}>
-          <div onClick={handleLogout} className={styles.adminLogout}><FaSignOutAlt /> Logout</div>
-        </div>
+        <button className={styles.logout} onClick={handleLogout}>Logout</button>
       </aside>
 
-      <main className={styles.MainAreaad}>
-        <header className={styles.headerad}>
-          <div className={styles.searchBoxad}>
+      <main className={styles.main}>
+        <header className={styles.header}>
+          <div className={styles.searchBox}>
             <FaSearch />
             <input type="text" placeholder="Search..." />
           </div>
 
-          <div className={styles.profileSectionad} ref={dropdownRef}>
-            <FaBell className={styles.bellIconad} />
+          <div className={styles.profileSection} ref={dropdownRef}>
+            <FaBell className={styles.bellIcon} />
             <div
-              className={styles.profilead}
-              onClick={() => setShowProfileOptions(prev => !prev)}
+              className={styles.profile}
+              onClick={() => setShowProfileOptions((prev) => !prev)}
             >
               <img src={ProfileImg} alt="Admin Profile" />
-              <div className={styles.ProfileDetailad}>
-                <strong className={styles.ProfileNamead}>Admin Name</strong>
-                <span className={styles.ProfileSemesterad}>Administrator</span>
+              <div>
+                <strong>Admin Name</strong>
+                <span>Administrator</span>
               </div>
-              <FaChevronDown className={styles.dropdownIconad}/>
+              <FaChevronDown />
             </div>
 
             {showProfileOptions && (
-              <div className={styles.dropdownad}>
+              <div className={styles.dropdown}>
                 <button onClick={() => navigate('/admin-profile')}>👤 View Profile</button>
                 <button onClick={() => navigate('/admin-edit')}>✏️ Edit Profile</button>
                 <button onClick={handleLogout}>🚪 Logout</button>
@@ -108,26 +200,17 @@ function AdminLayout() {
           </div>
         </header>
 
-        <div className={styles.adcontent}>
+        <div className={styles.content}>
           <Outlet />
         </div>
       </main>
 
-      <div className={styles.ChatIconad} onClick={() => setShowChat(!showChat)}>
-        <FaCommentDots />
-      </div>
-      {showChat && (
-        <div className={styles.ChatPopupad}>
-          <ChatPanel isOpen={true} />
-        </div>
-      )}
-
       {showLogoutDialog && (
-        <div className={styles.dialogOverlayad}>
-          <div className={styles.dialogBoxad}>
+        <div className={styles.dialogOverlay}>
+          <div className={styles.dialogBox}>
             <h3>⚠️ Confirm Logout</h3>
             <p>Do you want to logout?</p>
-            <div className={styles.dialogActionsad}>
+            <div className={styles.dialogActions}>
               <button onClick={confirmLogout}>Yes</button>
               <button onClick={() => setShowLogoutDialog(false)}>No</button>
             </div>
@@ -136,6 +219,6 @@ function AdminLayout() {
       )}
     </div>
   );
-}
+};
 
-export default AdminLayout;
+export default AdminDashboard;

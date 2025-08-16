@@ -1,0 +1,152 @@
+/* ====== Container & Title ====== */
+.container {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-bottom: 16px;
+}
+
+h3 {
+  margin-top: 24px;
+  margin-bottom: 12px;
+}
+
+/* ====== Project Info Box ====== */
+.projectBox {
+  background: #f9f9f9;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 16px;
+  margin-bottom: 20px;
+}
+
+.projectBox p {
+  margin: 6px 0;
+}
+
+/* ====== Group Members ====== */
+.groupList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.memberCard {
+  flex: 1 1 260px;
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+}
+
+.memberCard ul {
+  padding-left: 18px;
+}
+
+.memberCard li {
+  margin: 3px 0;
+}
+
+/* ====== Badges ====== */
+.badgeSuccess {
+  display: inline-block;
+  background: #f6ffed;
+  border: 1px solid #b7eb8f;
+  color: #389e0d;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.badgeInfo {
+  display: inline-block;
+  background: #e6f7ff;
+  border: 1px solid #91d5ff;
+  color: #096dd9;
+  padding: 2px 8px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+/* ====== Split Layout ====== */
+.split {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.panel {
+  flex: 1 1 340px;
+  background: white;
+  border: 1px solid #eee;
+  border-radius: 8px;
+  padding: 14px;
+}
+
+/* ====== Comments ====== */
+.commentList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.commentItem {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.commentMeta {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.commentText {
+  margin-top: 4px;
+  font-size: 0.9rem;
+}
+
+.note {
+  font-size: 0.8rem;
+  color: #888;
+  margin-top: 8px;
+}
+
+/* ====== Meetings ====== */
+.meetingList {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.meetingItem {
+  background: #fafafa;
+  border: 1px solid #eee;
+  border-radius: 6px;
+  padding: 8px 10px;
+}
+
+.meetingTitle {
+  font-weight: 500;
+}
+
+.meetingMeta {
+  font-size: 0.8rem;
+  color: #555;
+}
+
+.meetingNotes {
+  font-size: 0.85rem;
+  margin-top: 4px;
+  color: #333;
+}
+
+/* ====== Misc ====== */
+.muted {
+  color: #888;
+  font-size: 0.85rem;
+}

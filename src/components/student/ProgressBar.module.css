@@ -1,0 +1,50 @@
+.progressContainer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+
+.step {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.circle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  background-color: #f0f0f0;
+  color: #999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.completed .circle {
+  background-color: #4caf50;
+  color: white;
+  border-color: #4caf50;
+}
+
+.current .circle {
+  background-color: #2196f3;
+  color: white;
+  border-color: #2196f3;
+}
+
+.label {
+  margin-left: 6px;
+  font-weight: 500;
+}
+
+.line {
+  width: 40px;
+  height: 2px;
+  background-color: #ccc;
+  margin-left: 6px;
+  margin-right: 6px;
+}
